@@ -11,6 +11,6 @@ class MainPage:
     def moveToMainPage(self):
         return self.driver.get(self.mainUrl)
 
-    def moveToProductCart(self, wd, num):
+    def moveToProductCart(self, num):
         loc_duck=(By.XPATH,f'//ul[@class="listing-wrapper products"]/li[{num}]/a[@class="link"]')
-        wd.find_element(*loc_duck).click()
+        self.driver.find_element(*loc_duck).click()
