@@ -10,9 +10,9 @@ class Application:
         self.productPage=ProductPage(driver)
         self.cartPage = CartPage(driver)
 
-    def addProductsToCart(self, driver):
+    def addProductsToCart(self, driver,NumOfProducts):
         self.mainPage.moveToMainPage()
-        for i in range(1, 4):
+        for i in range(1, NumOfProducts):
             self.mainPage.moveToProductCart(driver, i)
             if self.productPage.isFindedElementSize(driver):
                 self.productPage.selectSizeDucks(driver)
